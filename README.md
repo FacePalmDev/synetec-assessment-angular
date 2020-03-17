@@ -20,7 +20,16 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 ## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+I've implemented the end to end tests using Cypress. It's much better than protractor. It's faster and has some great tooling.
+
+To run the tests simply use the following command:
+
+``` bash
+npm run cypress:open
+```
+
+This will open the cypress management UI you can then click the button labelled "run all specs" to run through the integration tests.
+
 
 ## Further help
 
