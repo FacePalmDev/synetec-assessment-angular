@@ -1,18 +1,22 @@
-.row{
-    margin-top:40px;
-    padding: 0 10px;
+.row {
+  margin-top: 40px;
+  padding: 0 10px;
 }
-.clickable{
-    cursor: pointer;   
+.clickable {
+  cursor: pointer;
 }
 
 .panel-heading div {
-    margin-top: -18px;
-    font-size: 15px;
+  margin-top: -18px;
+  font-size: 15px;
 }
-.panel-heading div span{
-    margin-left:5px;
+.panel-heading div span {
+  margin-left: 5px;
 }
-.panel-body{
-    display: none;
+.panel-body {
+  display: none;
+}
+
+#no-cities-warning {
+  margin-top: 4em;
 }

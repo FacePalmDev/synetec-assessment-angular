@@ -1,6 +1,8 @@
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import { CitiesListComponent } from './components/cities/cities-list.component';
+import { CitiesService } from './services/cities/cities.service';
+import { MockCitiesService } from 'src/testHelpers/MockCitiesService';
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -8,6 +10,11 @@ describe('AppComponent', () => {
         AppComponent,
         CitiesListComponent
       ],
+      providers: [
+        {
+          provide: CitiesService,
+          useClass: MockCitiesService
+        }]
     }).compileComponents();
   }));
 
@@ -22,7 +29,7 @@ describe('AppComponent', () => {
     const app = fixture.debugElement.componentInstance;
     expect(app.title).toEqual('Synetec');
   }));
-  
+
   it('should render title in a h1 tag', async(() => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
