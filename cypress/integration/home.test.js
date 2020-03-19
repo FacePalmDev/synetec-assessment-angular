@@ -17,7 +17,7 @@ describe('home page', () => {
 
     });
 
-    it('should display a message to the user when there is no city to display', () => {
+    it('should display a message to the user when there is are no cities to display', () => {
 
         // arrange
         cy.server();

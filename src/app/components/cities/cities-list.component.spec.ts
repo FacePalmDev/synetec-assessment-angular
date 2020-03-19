@@ -32,11 +32,9 @@ describe('CitiesListComponent', () => {
 
   it('should retrieve the expected number of cities', async(() => {
     const fixture = TestBed.createComponent(CitiesListComponent);
-    const cities$ = fixture.debugElement.componentInstance.cities$;
+    const cities = fixture.debugElement.componentInstance.cities;
 
-    cities$.subscribe((result: ICity[]) => {
-      expect(result.length).toBe(3);
-    });
+    expect(cities.length).toBe(3);
 
   }));
 });

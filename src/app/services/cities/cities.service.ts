@@ -2,6 +2,7 @@ import { Injectable } from "@angular/core";
 import { CitiesEndpoint } from "./cities-endpoint.service";
 import { ICity } from "../../models/city.model";
 import { Observable } from 'rxjs';
+import { catchError } from "rxjs/operators";
 
 @Injectable()
 export class CitiesService {
@@ -9,5 +10,9 @@ export class CitiesService {
 
     public get(): Observable<ICity[]> {
         return this._citiesEndpoint.get();
+    }
+
+    public delete(id: number): Observable<void> {
+        return this._citiesEndpoint.delete(id);
     }
 }
