@@ -3,14 +3,13 @@
         <div class="col-md-12">
             <h4>Cities list</h4>
 
-
             <ngx-spinner></ngx-spinner>
 
             <div id="alert-error" class="alert alert-danger cities-alert" *ngIf="showError">
                 <i class="fa fa-times" aria-hidden="true"></i>
                 {{errorMessage}}</div>
-
-            <div id="no-cities-warning" class="alert alert-warning cities-alert" *ngIf="cities?.length < 1">
+            <div id="no-cities-warning" class="alert alert-warning cities-alert"
+                *ngIf="showError === false && cities?.length < 1">
                 <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
                 There are no cities to display.</div>
 

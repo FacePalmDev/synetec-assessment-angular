@@ -14,7 +14,7 @@ import { NgxSpinnerService } from "ngx-spinner";
 export class CitiesListComponent implements OnInit {
 
     cities: ICity[];
-    showError: boolean;
+    showError = false;
     errorMessage: string;
     constructor(private _citiesService: CitiesService, private spinner: NgxSpinnerService) {
         this.refreshCities();
